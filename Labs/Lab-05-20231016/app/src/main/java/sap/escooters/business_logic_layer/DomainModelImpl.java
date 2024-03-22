@@ -77,7 +77,7 @@ public class DomainModelImpl implements DomainModel {
 	}
 
 	@Override
-	public int getNumOnoingRides() {
+	public int getNumOngoingRides() {
 		return rideCounter;
 	}
 }

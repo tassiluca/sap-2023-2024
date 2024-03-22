@@ -1,18 +1,20 @@
 package sap.escooters.infrastructure_layer.data_source;
 
-import java.io.*;
-import java.util.Optional;
 import io.vertx.core.json.JsonObject;
 import sap.escooters.business_logic_layer.DataSourceException;
 import sap.escooters.business_logic_layer.DataSourcePort;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+
 public class FileSystemAdapter implements DataSourcePort {
 
-	private String USERS_PATH = "users";
-	private String ESCOOTERS_PATH = "escooters";
-	private String RIDES_PATH = "rides";
+	private final String USERS_PATH = "users";
+	private final String ESCOOTERS_PATH = "escooters";
+	private final String RIDES_PATH = "rides";
 	
-	private String dbaseFolder;
+	private final String dbaseFolder;
 	
 	public FileSystemAdapter(String dbaseFolder) {
 		this.dbaseFolder =  dbaseFolder;
@@ -63,6 +65,4 @@ public class FileSystemAdapter implements DataSourcePort {
 			ex.printStackTrace();
 		}
 	}
-
-	
 }

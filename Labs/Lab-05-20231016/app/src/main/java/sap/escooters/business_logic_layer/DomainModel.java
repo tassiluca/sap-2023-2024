@@ -13,5 +13,5 @@ public interface DomainModel {
 	String startNewRide(User user, EScooter escooter);
 	Optional<Ride> getRide(String rideId);
 	
-	int getNumOnoingRides();
+	int getNumOngoingRides();
 }

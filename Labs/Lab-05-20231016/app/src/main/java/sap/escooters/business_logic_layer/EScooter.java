@@ -6,8 +6,8 @@ import io.vertx.core.json.JsonObject;
 
 public class EScooter  {
 
-	private String id;
-	public enum EScooterState { AVAILABLE, IN_USE, MAINTENANCE}	
+	private final String id;
+	public enum EScooterState { AVAILABLE, IN_USE, MAINTENANCE }
 	private EScooterState state;
 	private Optional<Location> loc;
 	
@@ -66,6 +66,4 @@ public class EScooter  {
 		}			
 		return scooterObj;
 	}
-
-	
 }

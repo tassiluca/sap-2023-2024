@@ -18,7 +18,6 @@ repositories {
 dependencies {
     // Use JUnit Jupiter for testing.
     testImplementation("org.junit.jupiter:junit-jupiter:5.9.3")
-
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
     // This dependency is used by the application.
@@ -33,19 +32,18 @@ dependencies {
  	
  	// MongoDB
  	implementation("org.mongodb:mongodb-driver-sync:4.11.0")
- 
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(20))
+        languageVersion.set(JavaLanguageVersion.of(17))
     }
 }
 
 application {
     // Define the main class for the application.
-    mainClass.set("sap.App")
+    mainClass.set("sap.escooters.launcher.EScooterManagementSystem")
 }
 
 tasks.named<Test>("test") {

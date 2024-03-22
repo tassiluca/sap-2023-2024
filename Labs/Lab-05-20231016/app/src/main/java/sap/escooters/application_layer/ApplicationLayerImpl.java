@@ -59,7 +59,7 @@ public class ApplicationLayerImpl implements ApplicationAPI {
 			EScooter sc = escooter.get();
 			if (sc.isAvailable()) {
 				String id = domainLayer.startNewRide(user.get(), escooter.get());
-				this.rideDashboardPort.notifyNumOngoingRidesChanged(domainLayer.getNumOnoingRides());
+				this.rideDashboardPort.notifyNumOngoingRidesChanged(domainLayer.getNumOngoingRides());
 				return id;
 			} else {
 				throw new RideNotPossibleException();
@@ -86,7 +86,7 @@ public class ApplicationLayerImpl implements ApplicationAPI {
 			Ride ri = ride.get();
 			if (ri.isOngoing()) {
 				ri.end();
-				this.rideDashboardPort.notifyNumOngoingRidesChanged(domainLayer.getNumOnoingRides());
+				this.rideDashboardPort.notifyNumOngoingRidesChanged(domainLayer.getNumOngoingRides());
 			} else {
 				throw new RideAlreadyEndedException();
 			}

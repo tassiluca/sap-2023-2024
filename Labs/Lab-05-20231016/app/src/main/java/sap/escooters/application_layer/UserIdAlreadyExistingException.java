@@ -1,5 +1,3 @@
 package sap.escooters.application_layer;
 
-public class UserIdAlreadyExistingException extends Exception {
-
-}
+public class UserIdAlreadyExistingException extends Exception { }

@@ -7,12 +7,12 @@ import io.vertx.core.json.JsonObject;
 
 public class Ride {
 
-	private Date startedDate;
+	private final Date startedDate;
 	private Optional<Date> endDate;
-	private User user;
-	private EScooter scooter;
+	private final User user;
+	private final EScooter scooter;
 	private boolean ongoing;
-	private String id;
+	private final String id;
 	
 	public Ride(String id, User user, EScooter scooter) {
 		this.id = id;
@@ -20,7 +20,7 @@ public class Ride {
 		this.endDate = Optional.empty();
 		this.user = user;
 		this.scooter = scooter;
-		ongoing = true;
+		this.ongoing = true;
 	}
 	
 	public String getId() {
@@ -28,8 +28,8 @@ public class Ride {
 	}
 	
 	public void end() {
-		endDate = Optional.of(new Date());
-		ongoing = false;
+		this.endDate = Optional.of(new Date());
+		this.ongoing = false;
 		save();
 	}
 
@@ -52,7 +52,7 @@ public class Ride {
 	public EScooter getEScooter() {
 		return scooter;
 	}
-	
+
 	public void save() {
 		try {
 			DomainModelImpl.getDataSourcePort().saveRide(toJson());
@@ -60,7 +60,7 @@ public class Ride {
 			ex.printStackTrace();
 		}
 	}
-	
+
 	public JsonObject toJson() {
 		JsonObject rideObj = new JsonObject();
 		rideObj.put("id", this.getId());
@@ -68,14 +68,11 @@ public class Ride {
 		rideObj.put("escooterId", this.getEScooter().getId());
 		rideObj.put("startDate", this.getStartedDate().toString());
 		Optional<Date> endDate = this.getEndDate();
-		
 		if (endDate.isPresent()) {
 			rideObj.put("endDate", endDate.get().toString());			
 		} else {
 			rideObj.putNull("location");			
-		}			
+		}
 		return rideObj;
 	}
-
-	
 }
