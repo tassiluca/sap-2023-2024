@@ -13,7 +13,6 @@ Activity
 
 - [**Assignment #05**](https://github.com/pslab-unibo/sap-2023-2024/blob/master/Assignments/Assignment-5-20231103.md)
 
-
 Tools of the day
 - [Spring Framework](https://spring.io)
     - [Spring Boot](https://spring.io/microservices) for implementing microservices
@@ -23,15 +22,4 @@ Tools of the day
     - [Spring Cloud](https://spring.io/projects/spring-cloud)  
         -  ready-to-use implementation of different microservices patterns 
     - Documentation
-        - [Guides](https://spring.io/guides) 
-
-
-
-
-
-	
-	
-		
-		
-		
-		
+        - [Guides](https://spring.io/guides)

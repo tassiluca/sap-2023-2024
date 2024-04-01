@@ -28,23 +28,11 @@ As a follow-up of the lecture about [Event-Driven Architecture Style](https://do
     - [Axon Code Samples](https://developer.axoniq.io/code-samples) 
         - [Hotel demo Example](https://github.com/AxonIQ/hotel-demo) discussed in the article [Event Modeling: What is it?](https://eventmodeling.org/posts/what-is-event-modeling/)  
 
-
-Activity 
-
+Activity
 - [**Assignment #06**](https://github.com/pslab-unibo/sap-2023-2024/blob/master/Assignments/Assignment-6-20231124.md)
-
 
 Tools of the day
 - [Apache Kafka](https://docs.docker.com/)
 - [Offset Explore / Kafka Tool GUI](https://www.kafkatool.com/)
 - [AsyncAPI](https://www.asyncapi.com/)
 - [Axon Framework](https://developer.axoniq.io/axon-framework/overview)
-
-
-
-	
-	
-		
-		
-		
-		
