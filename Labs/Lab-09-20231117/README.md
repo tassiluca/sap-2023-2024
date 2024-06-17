@@ -7,7 +7,6 @@ In this lab, we have a look to technologies for deploying microservices, accordi
 - [Deploying Microservices using Kubernetes](https://docs.google.com/document/d/16Sd413UjcnGv80FYOGlHLVr7ui5e4Rucyn_xI_v4ONQ/edit?usp=sharing)
 - [Deploying Microservices using Serverless AWS Lambda](https://docs.google.com/document/d/1STT7P8rWksSnUAcHEz2gi45h41ONSyduYt6LfGCblro/edit?usp=sharing)
 
-
 Tools of the day
 - [Docker](https://docs.docker.com/)
 - [Kubernetes](https://kubernetes.io/docs/home/)

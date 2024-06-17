@@ -2,7 +2,7 @@
 
 ## Lab #07-20231027 - [Repo](https://github.com/pslab-unibo/sap-2023-2024.git) 
 
-In [previous lab (20231020)](https://github.com/pslab-unibo/sap-2023-2024/blob/master/Labs/Lab-06-20231020/README.md) and in module 2.3 we dug into microservices and the design of microservices. In this lab, we see the design and prototype implementation of a simple example/system based on microservice architecture: the [Cooperative PixelArt System](https://docs.google.com/document/d/1tZgkVA_i08DHmW3Wnpnq-AIvbmVA3CMiGn1aWEBDZYM/edit?usp=sharing) (same example seen in PCD course). 
+In [previous lab (20231020)](https://github.com/pslab-unibo/sap-2023-2024/blob/master/Labs/Lab-06-20231020/README.md) and in module 2.3 we dug into microservices and the design of microservices. In this lab, we see the design and prototype implementation of a simple example/system based on microservice architecture: the [Cooperative PixelArt System](https://docs.google.com/document/d/1tZgkVA_i08DHmW3Wnpnq-AIvbmVA3CMiGn1aWEBDZYM/edit?usp=sharing) (same example seen in PCD course).
 
 Key points:
 - how to design a microservice adopting a clean architecture, exposing a REST API
@@ -57,6 +57,8 @@ This increases the chances of meeting the client's needs.
   - gRPC supports streaming requests and responses
   - [Notes about gRPC](https://tassiluca.github.io/distributed-systems-notes/notes/lab08-gRPC.html)
 
-> "I favor an architecture consisting of loosely coupled services that communicate with one another using async messaging. Synchronous protocols such as REST are used mostly yo communicate with other applications"
-> 
-> [Microservices Patterns]
+**Cons of synchronous IPC:**
+
+- synchronous communication reduces availability: availability is reduced whenever a service can only respond to its clients after receiving the response from another service
+  - **this problem exists even if services communicate with a request/response pattern over an asynchronous messaging**
+  - Mathematically, the availability of a system operation is the product of the availability of the services that are invoked by that operation
