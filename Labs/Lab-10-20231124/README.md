@@ -156,7 +156,7 @@ Benefits:
 Cons:
 
 - more complex architecture
-- "replication lag", i.e. the delay between when the command side publishes an event and when that event is processed and the query side updated.
+- "replication lag," i.e., the delay between when the command side publishes an event and when that event is processed and the query side updated.
   - a client app that updates an aggregate and then immediately queries the read model may not see the changes reflected in the read model
-    - must be written in a way that avoids exposing these potential inconsistencies to the user, like updating its local model without issuing a query (web app). Cons: the UI code may need to duplicate server-side code in order to update its model.
+    - it must be written in a way that avoids exposing these potential inconsistencies to the user, like updating its local model without issuing a query (web app). Cons: the UI code may need to duplicate server-side code in order to update its model.
     - use a token approach (see 1.3.2 @ Microservices Patterns)
